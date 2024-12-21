@@ -1,46 +1,39 @@
-// get express
-const express = require("express")
-const app = express()
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path"); // Ensure you require path module for file path handling
+const app = express();
 
-// cors setup
-var cors = require('cors')
-app.use(cors())
+// CORS setup
+var cors = require('cors');
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 
+// Get MongoDB connection
+const connectToMongo = require("./db");
+connectToMongo(); // Execute the MongoDB connection
 
-// get mongoDB connection
-const connectToMongo = require("./db")
-// execute the mongoConnection
-connectToMongo()
+// JSON parsing middleware (should be above the routes)
+app.use(express.json());
 
-// json parsing middlewar it should be abovw the routes
-app.use(express.json())
+// Serve static files from the 'uploads' folder
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// import the user route file
-const userRoute = require("./routes/User")
-// const recipeRoute = require("./routes/Recipe")
-
-// use the route 
-app.use("/api/user", userRoute)
-// app.use("/api/recipe", recipeRoute)
-
-
-const joinRequestRoute = require("./routes/JoinRequest"); 
-
-
-// Import the contact route
+// Import routes after app is initialized
+const userRoute = require("./routes/User");
+const joinRequestRoute = require("./routes/JoinRequest");
 const contactRoute = require("./routes/Contact");
+const societyRoute = require("./routes/societies");
+const eventRoute = require("./routes/eventRoutes");
+
+// Use the routes
+app.use("/api/user", userRoute);
 app.use("/api/joinRequest", joinRequestRoute);
-// Use the contact route
 app.use("/api/contact", contactRoute);
+app.use("/api/society", societyRoute);
+app.use("/api/event", eventRoute);
 
-
-const societyRoute = require("./routes/societies")
-app.use("/api/society", societyRoute)
-
-
-// mention port
+// Mention port
 let port = 3001;
-app.listen(port, ()=>{
-    console.log("App is running on " + port)
-})
-
+app.listen(port, () => {
+    console.log("App is running on port " + port);
+});

@@ -14,13 +14,19 @@ import Contact from './components/Contact';
 import JoinNowForm from "./components/JoinNowForm"
 import AdminDashboard from "./components/AdminDashboard"
 import SocietyState from './contexts/SocietyState';
+import EventState from './contexts/EventState';
+import EventCard from "./components/EventCard"
+import AllEvents from "./components/AllEvents"
+import EventDetails from "./components/EventDetails"
 function App() {
   return (
     <>
     
+    <EventState>
     <SocietyState>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/AllEvents" element={<AllEvents />} />
         <Route path="/onesociety" element={<Society />} />
         <Route path="/JoinNowForm" element={<JoinNowForm />} />
         <Route path="/society" element={<AllSocieties />} />
@@ -28,13 +34,18 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/getEvent/:id" element={<EventDetails />} />
         {/* <Route path="/AdminDashboard" element={<AdminDashboard />} /> */}
-        <Route path="/" element={<AdminDashboard />} />
+        {/* <Route path="/" element={<AdminDashboard />} /> */}
+        {/* <Route path="/" element={<AdminDashboard />} /> */}
       </Routes>
       </SocietyState>
+      </EventState>
+
     </>
   );
 }
 
 export default App;
+
 

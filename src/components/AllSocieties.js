@@ -96,7 +96,7 @@ const AllSocieties = () => {
                     <div className="d-flex justify-content-between">
                         {/* Prev Button */}
                         <button
-                            className="btn btn-primary"
+                            className="btn"
                             style={{ backgroundColor: '#1D1B5D', color: 'white' }}
                             onClick={prevPage}
                             disabled={currentPage === 1}

@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 import societyContext from "../contexts/SocietyContext";
-import Modal from 'react-bootstrap/Modal';
+import Modal from "react-bootstrap/Modal";
 
 function UpdateSociety(props) {
   const [show, setShow] = useState(props.show);
@@ -16,6 +16,8 @@ function UpdateSociety(props) {
     imgURL: props.imgURL,
   });
 
+  const [file, setFile] = useState(null); // State for the uploaded file
+
   // Handle input changes
   function handleChange(event) {
     const { value, name } = event.target;
@@ -25,10 +27,24 @@ function UpdateSociety(props) {
     }));
   }
 
+  // Handle file input change
+  function handleFileChange(event) {
+    setFile(event.target.files[0]); // Store the selected file
+  }
+
   // Handle form submission
   function handleSubmit(event) {
     event.preventDefault();
-    updateSociety(props.id, formData.name, formData.tagline, formData.imgURL);
+
+    // Create a new FormData object
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("tagline", formData.tagline);
+    if (file) {
+      formDataToSend.append("image", file); // Append the selected file to FormData
+    }
+
+    updateSociety(props.id, formDataToSend); // Send FormData to backend
   }
 
   return (
@@ -42,7 +58,7 @@ function UpdateSociety(props) {
             <div className="form-group my-2">
               <label htmlFor="name">Society Name</label>
               <input
-                style={{ border: '1px solid black' }}
+                style={{ border: "1px solid black" }}
                 type="text"
                 className="form-control"
                 id="name"
@@ -67,19 +83,18 @@ function UpdateSociety(props) {
             </div>
 
             <div className="form-group my-2">
-              <label htmlFor="image">Image URL</label>
+              <label htmlFor="image">Society Image</label>
               <input
-                type="text"
+                type="file"
                 className="form-control"
                 id="image"
-                placeholder="Enter image URL"
-                value={formData.imgURL}
                 name="image"
-                onChange={handleChange}
+                accept="image/*"
+                onChange={handleFileChange} // Handling file input change
               />
             </div>
 
-            <button style={{ margin: '20px' }} type="submit" className="submitButton">
+            <button style={{ margin: "20px" }} type="submit" className="submitButton">
               Submit
             </button>
           </form>

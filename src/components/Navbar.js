@@ -27,7 +27,7 @@ const Navbar = () => {
               <a className="nav-link" href="/society" style={{ color: '#1D1B5D' }}>Societies</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/events" style={{ color: '#1D1B5D' }}>Events</a>
+              <a className="nav-link" href="/AllEvents" style={{ color: '#1D1B5D' }}>Events</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/about" style={{ color: '#1D1B5D' }}>About</a>
