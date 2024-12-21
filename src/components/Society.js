@@ -1,16 +1,10 @@
 
 // components/Home.js
 import React from 'react';
-import mission from '../Images/mission.png';
 import tec from '../Images/tec.png';
 import compete from '../Images/compete.png';
 import codecon from '../Images/codecon.png';
-import { Container, Row, Col } from 'react-bootstrap';
-import SocietyCard from './SociteyCard';
 import GDG from '../Images/GDG.png';
-import IEEE from '../Images/IEEE.png';
-import ILC from '../Images/ILC.png';
-import team from "../Images/team-removebg-preview.png"
 import gallery from '../Images/gallery.jpg';
 
 const Society = () => {
@@ -30,79 +24,79 @@ const Society = () => {
             </section>
 
             <section className="py-5">
-  <div className="container">
-    <div className="row align-items-center">
-    <h2>Who we are?</h2>
-        <p style={{width: '100%'}}>
-          Welcome to GDGoC (Google Developer Group on Campus), where we are excited to present our community's new identity! Our vision, future goals, and how we aim to empower students to thrive in technology and beyond.
-        </p>
-    </div>
-    <div className="row align-items-center">
-      {/* Text Content */}
-      <div className="col-md-6">
-        
-
-        {/* Cards Row */}
-        <div className="row">
-          {/* Card 1 (Existing Card) */}
-          <div className="col-md-6">
-  <section className="mx-auto my-5" style={{ maxWidth: '23rem' }}>
-    <div className="card">
-      <div className="card-body">
-        <blockquote className="blockquote blockquote-custom bg-white px-3 pt-4">
-          <div className="blockquote-custom-icon bg-success shadow-1-strong">
-            <i className="fa fa-handshake text-white"></i>
-          </div>
-          <p className="mb-0 mt-2 font-italic">
-            "At GDGoC, our strength lies in building a supportive community that collaborates, grows, and thrives together."
-          </p>
-          <footer className="blockquote-footer pt-4 mt-4 border-top">
-            GDGoC Community <cite title="Source Title">Core Values</cite>
-          </footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-</div>
-
-
-          {/* Card 2 (New Card) */}
-          <div className="col-md-6">
-            <section className="mx-auto my-5" style={{ maxWidth: '23rem' }}>
-              <div className="card">
-                <div className="card-body">
-                  <blockquote className="blockquote blockquote-custom bg-white px-3 pt-4">
-                    <div className="blockquote-custom-icon bg-primary shadow-1-strong">
-                      <i className="fa fa-lightbulb text-white"></i>
+                <div className="container">
+                    <div className="row align-items-center">
+                        <h2>Who we are?</h2>
+                        <p style={{ width: '100%' }}>
+                            Welcome to GDGoC (Google Developer Group on Campus), where we are excited to present our community's new identity! Our vision, future goals, and how we aim to empower students to thrive in technology and beyond.
+                        </p>
                     </div>
-                    <p className="mb-0 mt-2 font-italic">
-                      "At GDGoC, we believe in fostering creativity and collaboration, paving the way for groundbreaking ideas."
-                    </p>
-                    <footer className="blockquote-footer pt-4 mt-4 border-top">
-                      GDGoC Team <cite title="Source Title">Vision Statement</cite>
-                    </footer>
-                  </blockquote>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
+                    <div className="row align-items-center">
+                        {/* Text Content */}
+                        <div className="col-md-6">
 
-      {/* Video Section */}
-      <div className="col-md-6">
-        <video
-          src="https://videos.pexels.com/video-files/3255275/3255275-uhd_2560_1440_25fps.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{ width: "100%", height: "100%" }}
-        />
-      </div>
-    </div>
-  </div>
-</section>
+
+                            {/* Cards Row */}
+                            <div className="row">
+                                {/* Card 1 (Existing Card) */}
+                                <div className="col-md-6">
+                                    <section className="mx-auto my-5" style={{ maxWidth: '23rem' }}>
+                                        <div className="card">
+                                            <div className="card-body">
+                                                <blockquote className="blockquote blockquote-custom bg-white px-3 pt-4">
+                                                    <div className="blockquote-custom-icon bg-success shadow-1-strong">
+                                                        <i className="fa fa-handshake text-white"></i>
+                                                    </div>
+                                                    <p className="mb-0 mt-2 font-italic">
+                                                        "At GDGoC, our strength lies in building a supportive community that collaborates, grows, and thrives together."
+                                                    </p>
+                                                    <footer className="blockquote-footer pt-4 mt-4 border-top">
+                                                        GDGoC Community <cite title="Source Title">Core Values</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+
+
+                                {/* Card 2 (New Card) */}
+                                <div className="col-md-6">
+                                    <section className="mx-auto my-5" style={{ maxWidth: '23rem' }}>
+                                        <div className="card">
+                                            <div className="card-body">
+                                                <blockquote className="blockquote blockquote-custom bg-white px-3 pt-4">
+                                                    <div className="blockquote-custom-icon bg-primary shadow-1-strong">
+                                                        <i className="fa fa-lightbulb text-white"></i>
+                                                    </div>
+                                                    <p className="mb-0 mt-2 font-italic">
+                                                        "At GDGoC, we believe in fostering creativity and collaboration, paving the way for groundbreaking ideas."
+                                                    </p>
+                                                    <footer className="blockquote-footer pt-4 mt-4 border-top">
+                                                        GDGoC Team <cite title="Source Title">Vision Statement</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Video Section */}
+                        <div className="col-md-6">
+                            <video
+                                src="https://videos.pexels.com/video-files/3255275/3255275-uhd_2560_1440_25fps.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                style={{ width: "100%", height: "100%" }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
 
@@ -217,7 +211,7 @@ const Society = () => {
             </section>
 
 
-            {/* Section 5: Gallery */}
+            {/* Section 5: contact */}
             <section className="py-5" style={{ backgroundColor: 'white', color: "black" }}>
                 <div className="container">
 

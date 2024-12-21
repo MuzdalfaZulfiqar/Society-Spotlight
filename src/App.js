@@ -10,14 +10,16 @@ import Login from "./components/Login";
 import Society from './components/Society';
 import About from './components/About';
 import AllSocieties from './components/AllSocieties';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<AllSocieties />} />
+        {/* <Route path="/" element={<AllSocieties />} /> */}
         <Route path="/society" element={<Society />} />
+        <Route path="/" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
@@ -28,3 +30,4 @@ function App() {
 }
 
 export default App;
+

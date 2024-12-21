@@ -23,6 +23,13 @@ const userRoute = require("./routes/User")
 app.use("/api/user", userRoute)
 // app.use("/api/recipe", recipeRoute)
 
+
+// Import the contact route
+const contactRoute = require("./routes/Contact");
+
+// Use the contact route
+app.use("/api/contact", contactRoute);
+
 // mention port
 let port = 3001;
 app.listen(port, ()=>{
