@@ -3,10 +3,13 @@
 import React from 'react';
 import about from '../Images/about.png';
 import { Container, Row, Col } from 'react-bootstrap';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const About = () => {
     return (
         <div>
+              <Navbar/>
             {/* Section 1: About */}
             <section className="text-center text-white py-5" style={{ backgroundColor: '#1D1B5D' }}>
                 <div className="container">
@@ -135,6 +138,7 @@ const About = () => {
                     </Row>
                 </div>
             </section>
+            <Footer/>
         </div>
     );
 };

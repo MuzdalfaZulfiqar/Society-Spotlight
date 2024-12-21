@@ -24,11 +24,19 @@ app.use("/api/user", userRoute)
 // app.use("/api/recipe", recipeRoute)
 
 
+const joinRequestRoute = require("./routes/JoinRequest"); 
+
+
 // Import the contact route
 const contactRoute = require("./routes/Contact");
-
+app.use("/api/joinRequest", joinRequestRoute);
 // Use the contact route
 app.use("/api/contact", contactRoute);
+
+
+const societyRoute = require("./routes/societies")
+app.use("/api/society", societyRoute)
+
 
 // mention port
 let port = 3001;

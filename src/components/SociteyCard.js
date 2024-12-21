@@ -1,7 +1,6 @@
 import React from 'react';
-import GDG from '../Images/GDG.png';
-import IEEE from '../Images/IEEE.png';
-import ILC from '../Images/ILC.png';
+import { Link } from 'react-router-dom';
+
 
 const SocietyCard = ({ image, societyName, tagline }) => {
     return (
@@ -27,9 +26,11 @@ const SocietyCard = ({ image, societyName, tagline }) => {
                     <h5 className="card-title">{societyName}</h5>
                     <p className="card-text">{tagline}</p>
                     <div className="d-flex justify-content-center align-items-center">
-                        <button className="btn btn-primary"
-                            style={{ width: "130px", height: '40px', backgroundColor: "#1D1B5D", borderColor: "#1D1B5D" }}
-                        >Join now</button>
+                        <button className="btn btn-primary topsocietyBtn"
+                            style={{ width: "130px", height: '40px', backgroundColor: "#1D1B5D", borderColor: "#1D1B5D" }}   
+                        >
+                             <Link to="/onesociety">View Profile</Link>
+                            </button>
 
                     </div>
                     <div className="d-flex justify-content-center align-items-center">

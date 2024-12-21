@@ -3,6 +3,9 @@ import GDG from '../Images/GDG.png';
 import IEEE from '../Images/IEEE.png';
 import ILC from '../Images/ILC.png';
 import SocietyCard from './SociteyCard';
+import Navbar from './Navbar';
+import Footer from './Footer';
+
 const AllSocieties = () => {
 
     // Dummy array to simulate data for societies
@@ -47,6 +50,7 @@ const AllSocieties = () => {
 
     return (
         <div>
+              <Navbar/>
             <section
                 className="py-3"
                 style={{ backgroundColor: '#1D1B5D', color: 'white', minHeight: '440px', maxHeight: '86vh' }}
@@ -112,6 +116,7 @@ const AllSocieties = () => {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </div>
     );
 };

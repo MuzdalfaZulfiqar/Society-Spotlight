@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-
+import img from "../Images/img.png"
+import Navbar from './Navbar';
+import Footer from './Footer';
 const Contact = () => {
     const [formData, setFormData] = useState({
         fullname: "",
@@ -71,35 +73,35 @@ const Contact = () => {
     return (
 
         <section className="" style={{ backgroundColor: "white", color: "black" }}>
+  <Navbar/>
 
-
-       {/* Why Contact Us Section */}
-<div className="why-contact-us text-center mb-5" style={{ backgroundColor: '#1D1B5D', padding:"27px" }}>
-  <h2 className="mb-4 text-white  display-6">Why Contact Us?</h2>
-  <div className="row justify-content-center">
-    <div className="col-sm-12 col-md-4 col-lg-3 mb-4">
-      <div className="icon-container bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style={{ width: '70px', height: '70px', fontSize: '24px' }}>
-        🤝
-      </div>
-      <h5 className="text-white">Collaborate with Us</h5>
-      <p className="text-white">Partner with top societies like GDG, IEEE, and more for mutual growth.</p>
-    </div>
-    <div className="col-sm-12 col-md-4 col-lg-3 mb-4">
-      <div className="icon-container bg-success text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style={{ width: '70px', height: '70px', fontSize: '24px' }}>
-        🌟
-      </div>
-      <h5 className="text-white">Join the Spotlight</h5>
-      <p className="text-white">Showcase your society and let others see your contributions.</p>
-    </div>
-    <div className="col-sm-12 col-md-4 col-lg-3 mb-4">
-      <div className="icon-container bg-warning text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style={{ width: '70px', height: '70px', fontSize: '24px' }}>
-        ❓
-      </div>
-      <h5 className="text-white">Get Support</h5>
-      <p className="text-white">Have any issues or suggestions? We're here to help you.</p>
-    </div>
-  </div>
-</div>
+            {/* Why Contact Us Section */}
+            <div className="why-contact-us text-center mb-5" style={{ backgroundColor: '#1D1B5D', padding: "27px" }}>
+                <h2 className="mb-4 text-white  display-6">Why Contact Us?</h2>
+                <div className="row justify-content-center">
+                    <div className="col-sm-12 col-md-4 col-lg-3 mb-4">
+                        <div className="icon-container bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style={{ width: '70px', height: '70px', fontSize: '24px' }}>
+                            🤝
+                        </div>
+                        <h5 className="text-white">Collaborate with Us</h5>
+                        <p className="text-white">Partner with top societies like GDG, IEEE, and more for mutual growth.</p>
+                    </div>
+                    <div className="col-sm-12 col-md-4 col-lg-3 mb-4">
+                        <div className="icon-container bg-success text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style={{ width: '70px', height: '70px', fontSize: '24px' }}>
+                            🌟
+                        </div>
+                        <h5 className="text-white">Join the Spotlight</h5>
+                        <p className="text-white">Showcase your society and let others see your contributions.</p>
+                    </div>
+                    <div className="col-sm-12 col-md-4 col-lg-3 mb-4">
+                        <div className="icon-container bg-warning text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style={{ width: '70px', height: '70px', fontSize: '24px' }}>
+                            ❓
+                        </div>
+                        <h5 className="text-white">Get Support</h5>
+                        <p className="text-white">Have any issues or suggestions? We're here to help you.</p>
+                    </div>
+                </div>
+            </div>
 
             <div className="container">
                 <h4 className="mb-4 display-6 text-center">Reach out to Us</h4>
@@ -193,6 +195,7 @@ const Contact = () => {
                 </Modal.Header>
                 <Modal.Body>{modalMessage}</Modal.Body>
             </Modal>}
+            <Footer/>
         </section>
     );
 };

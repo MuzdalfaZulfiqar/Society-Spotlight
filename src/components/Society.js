@@ -6,6 +6,9 @@ import compete from '../Images/compete.png';
 import codecon from '../Images/codecon.png';
 import GDG from '../Images/GDG.png';
 import gallery from '../Images/gallery.jpg';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const Society = () => {
 
@@ -14,12 +17,18 @@ const Society = () => {
 
     return (
         <div>
+            <Navbar/>
             {/* Section 2: Hero */}
             <section className="text-center text-white py-5" style={{ backgroundColor: '#1D1B5D' }}>
                 <img src={GDG} alt="tec" />
                 <div className="container">
                     <h1>Google Developers Groups</h1>
                     <p>Connect, learn, Grow!</p>
+                    <button className="btn btn-primary joinnowbtn"
+                            style={{ width: "190px", height: '40px', backgroundColor: "white", borderColor: "#1D1B5D" , color:"black"}}   
+                        >
+                             <Link to="/JoinNowForm">Become a member</Link>
+                            </button>
                 </div>
             </section>
 
@@ -281,7 +290,7 @@ const Society = () => {
                     </section>
                 </div>
             </section>
-
+                <Footer/>
         </div>
     );
 };

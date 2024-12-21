@@ -5,12 +5,16 @@ import mission from '../Images/mission.png';
 import tec from '../Images/tec.png';
 import compete from '../Images/compete.png';
 import codecon from '../Images/codecon.png';
-import { Container, Row, Col } from 'react-bootstrap';
 import SocietyCard from './SociteyCard';
 import GDG from '../Images/GDG.png';
 import IEEE from '../Images/IEEE.png';
 import ILC from '../Images/ILC.png';
 import img from "../Images/img.png"
+import Navbar from './Navbar';
+import Footer from './Footer';
+import { Link } from 'react-router-dom';
+
+
 
 const Home = () => {
 
@@ -20,7 +24,7 @@ const Home = () => {
 
     return (
         <div>
-
+  <Navbar />
             <section
                 className="py-3"
                 style={{ backgroundColor: '#1D1B5D', color: 'white', minHeight: '440px', maxHeight: '86vh' }}
@@ -36,7 +40,10 @@ const Home = () => {
                             <h1 style={{ fontWeight: 'bold'  , fontSize:"62px"}}>Shine.</h1>
                             <button className="btn btn-primary"
                             style={{ width: "200px", height: '50px', backgroundColor: "white", borderColor: "#1D1B5D", color: "black" }}
-                        >Explore All Societies</button>
+                            
+                        >
+                            <Link to="/society">  Explore All Societies</Link>
+                           </button>
                         </div>
 
                         {/* Right Image */}
@@ -86,10 +93,13 @@ const Home = () => {
                             />
                         </div>
                     </div>
-                    <div className="text-center mt-3">
+                    <div className="text-center mt-3 topsocietyBtn">
                         <button className="btn btn-primary"
-                            style={{ width: "200px", height: '50px', backgroundColor: "#1D1B5D", borderColor: "#1D1B5D" }}
-                        >Explore All Societies</button>
+                            style={{ width: "200px", height: '50px', backgroundColor: "#1D1B5D", borderColor: "#1D1B5D", color:"white" }}
+                        >
+                          <Link to="/society">  Explore All Societies</Link>   
+                            
+                            </button>
                     </div>
                 </div>
             </section>
@@ -137,6 +147,7 @@ const Home = () => {
 
                 </div>
             </section>
+            <Footer/>
         </div>
     );
 };

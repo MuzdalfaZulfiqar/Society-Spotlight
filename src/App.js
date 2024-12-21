@@ -11,20 +11,27 @@ import Society from './components/Society';
 import About from './components/About';
 import AllSocieties from './components/AllSocieties';
 import Contact from './components/Contact';
-
+import JoinNowForm from "./components/JoinNowForm"
+import AdminDashboard from "./components/AdminDashboard"
+import SocietyState from './contexts/SocietyState';
 function App() {
   return (
     <>
-      <Navbar />
+    
+    <SocietyState>
       <Routes>
-        {/* <Route path="/" element={<AllSocieties />} /> */}
-        <Route path="/society" element={<Society />} />
-        <Route path="/" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/onesociety" element={<Society />} />
+        <Route path="/JoinNowForm" element={<JoinNowForm />} />
+        <Route path="/society" element={<AllSocieties />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        {/* <Route path="/AdminDashboard" element={<AdminDashboard />} /> */}
+        <Route path="/" element={<AdminDashboard />} />
       </Routes>
-      <Footer />
+      </SocietyState>
     </>
   );
 }

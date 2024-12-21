@@ -19,13 +19,13 @@ const Footer = () => {
                 <a href="/about" className="text-white text-decoration-none">About Us</a>
               </li>
               <li className="list-inline-item me-3">
-                <a href="/discover" className="text-white text-decoration-none">Contact Us</a>
+                <a href="/contact" className="text-white text-decoration-none">Contact Us</a>
               </li>
               <li className="list-inline-item me-3">
                 <a href="/explore" className="text-white text-decoration-none">Events</a>
               </li>
               <li className="list-inline-item">
-                <a href="/books" className="text-white text-decoration-none">Societies</a>
+                <a href="/society" className="text-white text-decoration-none">Societies</a>
               </li>
             </ul>
           </div>
