@@ -1,21 +1,18 @@
 // App.js
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import { Route, Routes } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import SignUp from "./components/SignUp";
-import Login from "./components/Login";
-import Society from './components/Society';
-import About from './components/About';
-import AllSocieties from './components/AllSocieties';
-import Contact from './components/Contact';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+import { Route, Routes } from "react-router-dom"
+import Home from './components/Home'
+import SignUp from "./components/SignUp"
+import Login from "./components/Login"
+import Society from './components/Society'
+import About from './components/About'
+import AllSocieties from './components/AllSocieties'
+import Contact from './components/Contact'
 import JoinNowForm from "./components/JoinNowForm"
 import AdminDashboard from "./components/AdminDashboard"
-import SocietyState from './contexts/SocietyState';
-import EventState from './contexts/EventState';
-import EventCard from "./components/EventCard"
+import SocietyState from './contexts/SocietyState'
+import EventState from './contexts/EventState'
 import AllEvents from "./components/AllEvents"
 import EventDetails from "./components/EventDetails"
 function App() {
@@ -35,9 +32,8 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/getEvent/:id" element={<EventDetails />} />
+        <Route path="/" element={<AdminDashboard />} />
         {/* <Route path="/AdminDashboard" element={<AdminDashboard />} /> */}
-        {/* <Route path="/" element={<AdminDashboard />} /> */}
-        {/* <Route path="/" element={<AdminDashboard />} /> */}
       </Routes>
       </SocietyState>
       </EventState>

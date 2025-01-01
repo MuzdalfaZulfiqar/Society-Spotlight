@@ -34,7 +34,7 @@ const EventCard = ({ id, image, title, description, date, location , onViewEvent
                     onViewEvent(id);
                 }}
               >
-                View Recipe
+                View Details
               </button>
 
           
